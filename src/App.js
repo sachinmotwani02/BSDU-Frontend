@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import { EditText } from 'react-edit-text';
+import SideNav from './components/SideNav';
+import EditScreen from './screens/EditScreen';
+import School from './screens/School';
 
 function App() {
+
+  const [name, setName] = useState('School of Automobile');
+  const [desc, setDesc] = useState('Lorem ipsum oder isdum.');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <EditScreen /> */}
+      <School />
     </div>
   );
 }
