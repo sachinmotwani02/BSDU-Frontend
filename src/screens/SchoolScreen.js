@@ -46,8 +46,12 @@ const columns = [
     cell: row => <div><ViewButton name="View" /><ViewButton name="Edit" /><ViewButton name="Delete" /></div>
   },
 ];
+<<<<<<< HEAD:src/screens/School.js
 
 const School = () => {
+=======
+const SchoolScreen = () => {
+>>>>>>> 3ba537befd4724ffcf3362e53de3532cd47adda9:src/screens/SchoolScreen.js
     return (
         <div>
             <SideNav />
@@ -65,4 +69,4 @@ const School = () => {
     )
 }
 
-export default School
+export default SchoolScreen
