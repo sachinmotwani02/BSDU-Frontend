@@ -31,7 +31,7 @@ const columns = [
     cell: row => <div><ViewButton name="View" /><ViewButton name="Edit" /><ViewButton name="Delete" /></div>
   },
 ];
-const School = () => {
+const SchoolScreen = () => {
     return (
         <div>
             <SideNav />
@@ -49,4 +49,4 @@ const School = () => {
     )
 }
 
-export default School
+export default SchoolScreen
