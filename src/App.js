@@ -9,9 +9,9 @@ function App() {
 
   return (
     <div>
-      {/* <EditScreen /> */}
+      <EditScreen />
       {/* <School /> */}
-      <LoginScreen />
+      {/* <LoginScreen /> */}
     </div>
   );
 }

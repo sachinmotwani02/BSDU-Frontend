@@ -3,10 +3,25 @@ import SideNav from '../components/SideNav';
 import DataTable from 'react-data-table-component';
 import ViewButton from '../components/ViewButton';
 
-const data = [{ id: 1, name: 'Conan the Barbarian', school: 'automobile', category: 'school',  },
-{ id: 2, name: 'Harry Potter', school: 'automobile', category: 'school' },
-{ id: 3, name: 'Harry met ashwin', school: 'csit', category: 'school' }
-];
+const axios = require('axios');
+
+const data = axios.get('/user?ID=12345')
+.then(function (response) {
+  console.log(response);
+})
+  .catch(function (error) {
+    // handle error
+    console.log(error);
+  })
+  .then(function () {
+    // always executed
+  });
+
+  
+// const data = [{ id: 1, name: 'Conan the Barbarian', school: 'automobile', category: 'school',  },
+// { id: 2, name: 'Harry Potter', school: 'automobile', category: 'school' },
+// { id: 3, name: 'Harry met ashwin', school: 'csit', category: 'school' }
+// ];
 
 const columns = [
   {
@@ -31,6 +46,7 @@ const columns = [
     cell: row => <div><ViewButton name="View" /><ViewButton name="Edit" /><ViewButton name="Delete" /></div>
   },
 ];
+
 const School = () => {
     return (
         <div>
