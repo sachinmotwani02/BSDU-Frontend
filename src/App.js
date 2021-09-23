@@ -1,19 +1,24 @@
-import React, { useState } from 'react'
-import { EditText } from 'react-edit-text';
-import SideNav from './components/SideNav';
+import React from 'react'
 import EditScreen from './screens/EditScreen';
-import School from './screens/School';
+import SchoolScreen from './screens/SchoolScreen';
+import { Redirect, Route, Switch } from 'react-router-dom';
+import DashboardScreen from './screens/DashboardScreen';
+import ProgramScreen from './screens/ProgramScreen';
+
 
 function App() {
 
-  const [name, setName] = useState('School of Automobile');
-  const [desc, setDesc] = useState('Lorem ipsum oder isdum.');
 
   return (
-    <div>
+    <>
       {/* <EditScreen /> */}
-      <School />
-    </div>
+      <Switch>
+          <Route exact path="/" component={DashboardScreen} />
+          <Route exact path="/school" component={SchoolScreen} />
+          <Route exact path="/programs" component={ProgramScreen} />
+          <Redirect to="/" />
+      </Switch>
+    </>
   );
 }
 
