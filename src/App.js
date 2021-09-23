@@ -10,13 +10,6 @@ function App() {
 
 
   return (
-<<<<<<< HEAD
-    <div>
-      <EditScreen />
-      {/* <School /> */}
-      {/* <LoginScreen /> */}
-    </div>
-=======
     <>
       {/* <EditScreen /> */}
       <Switch>
@@ -26,7 +19,6 @@ function App() {
           <Redirect to="/" />
       </Switch>
     </>
->>>>>>> 3ba537befd4724ffcf3362e53de3532cd47adda9
   );
 }
 
