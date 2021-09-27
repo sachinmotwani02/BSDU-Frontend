@@ -26,12 +26,22 @@ const columns = [
   },
   {
     name: 'Image',
-    selector: 'scl_image',
+    selector: 'school_image',
     sortable: true,
   },
   {
-    name: 'Description',
-    selector: 'description',
+    name: 'Overview',
+    selector: 'overview',
+    sortable: true,
+  },
+  {
+    name: 'Objective',
+    selector: 'objective',
+    sortable: true,
+  },
+  {
+    name: 'Highlights',
+    selector: 'key_highlights',
     sortable: true,
   },
   {
@@ -40,12 +50,12 @@ const columns = [
     cell: row => <div><ViewButton name="View" /><ViewButton name="Edit" /><ViewButton name="Delete" /></div>
   },
 ];
-const SchoolScreen = () => {
+const SchoolIndividual = () => {
 
   const [value, setValue] = useState('')
 
   useEffect(() => {
-    axios.get('http://localhost:8000/api/schools/?format=json')
+    axios.get('http://127.0.0.1:8000/api/indschool/?format=json')
     .then(function (response) {
       console.log(response);
       setValue(response.data);
@@ -75,4 +85,4 @@ const SchoolScreen = () => {
     )
 }
 
-export default SchoolScreen
+export default SchoolIndividual
