@@ -18,16 +18,32 @@ const SideNav = () => {
                 <h3>Individual School</h3>
             </NavLink>
 
-            
+
             <NavLink className="nav-links" to="/programs" style={{ textDecoration: 'none' }} activeClassName="menu_active" exact>
                 <h3>Program</h3>
             </NavLink>
-            <div className="nav-links">
+
+            <NavLink className="nav-links" to="/indprogram" style={{ textDecoration: 'none' }} activeClassName="menu_active" exact>
                 <h3>Individual Program</h3>
-            </div>
-            <div className="nav-links">
+                </NavLink>
+
+
+                <NavLink className="nav-links" to="/faculty" style={{ textDecoration: 'none' }} activeClassName="menu_active" exact>
                 <h3>Faculty</h3>
-            </div>   
+                </NavLink>  
+
+                <NavLink className="nav-links" to="/indfaculty" style={{ textDecoration: 'none' }} activeClassName="menu_active" exact>
+                <h3>Faculty Individual</h3>
+                </NavLink> 
+
+                <NavLink className="nav-links" to="/leader" style={{ textDecoration: 'none' }} activeClassName="menu_active" exact>
+                <h3>Leaders</h3>
+                </NavLink>
+
+                <NavLink className="nav-links" to="/result" style={{ textDecoration: 'none' }} activeClassName="menu_active" exact>
+                <h3>Result</h3>
+                </NavLink>
+
         </div>
     )
 }

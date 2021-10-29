@@ -13,11 +13,6 @@ const axios = require('axios');
 // ];
 
 
-const Create = () =>{
-  
-}
-
-
 const columns = [
   {
     name: 'ID',
@@ -31,26 +26,41 @@ const columns = [
   },
   {
     name: 'Image',
-    selector: 'scl_image',
+    selector: 'faculty_image',
     sortable: true,
   },
   {
-    name: 'Description',
-    selector: 'description',
+    name: 'Designation',
+    selector: 'designation',
+    sortable: true,
+  },
+  {
+    name: 'Contact',
+    selector: 'mobile_no',
+    sortable: true,
+  },
+  {
+    name: 'Email',
+    selector: 'email',
+    sortable: true,
+  },
+  {
+    name: 'Introduction',
+    selector: 'introduction',
     sortable: true,
   },
   {
     name: 'Action',
     selector: 'action',
-    cell: row => <div><ViewButton name="Create"  /><ViewButton name="Edit" /><ViewButton name="Delete" /></div>
+    cell: row => <div><ViewButton name="View" /><ViewButton name="Edit" /><ViewButton name="Delete" /></div>
   },
 ];
-const SchoolScreen = () => {
+const FacultyIndividual = () => {
 
   const [value, setValue] = useState('')
 
   useEffect(() => {
-    axios.get('http://localhost:8000/api/schools/?format=json')
+    axios.get('http://127.0.0.1:8000/api/indfaculty/?format=json')
     .then(function (response) {
       console.log(response);
       setValue(response.data);
@@ -67,7 +77,7 @@ const SchoolScreen = () => {
         <div>
             <SideNav />
             <div className="main">
-            <h2>School</h2>
+            <h2>Faculty Individual</h2>
             <DataTable
                 title=""
                 columns={columns}
@@ -80,4 +90,4 @@ const SchoolScreen = () => {
     )
 }
 
-export default SchoolScreen
+export default FacultyIndividual

@@ -13,11 +13,6 @@ const axios = require('axios');
 // ];
 
 
-const Create = () =>{
-  
-}
-
-
 const columns = [
   {
     name: 'ID',
@@ -25,32 +20,68 @@ const columns = [
     sortable: true,
   },
   {
-    name: 'Name',
-    selector: 'name',
+    name: 'Heading',
+    selector: 'heading',
     sortable: true,
   },
   {
-    name: 'Image',
-    selector: 'scl_image',
+    name: 'Objective',
+    selector: 'objectives',
     sortable: true,
   },
   {
-    name: 'Description',
-    selector: 'description',
+    name: 'Duration',
+    selector: 'duration',
+    sortable: true,
+  },
+  
+  {
+    name: 'Eligibility Criteria',
+    selector: 'eligibility_criteria',
+    sortable: true,
+  },
+
+  {
+    name: 'Selection Procedure',
+    selector: 'selection_procedure',
+    sortable: true,
+  },
+
+  {
+    name: 'Curriculum',
+    selector: 'curriculum',
+    sortable: true,
+  },
+
+  {
+    name: 'Career',
+    selector: 'career_employability',
+    sortable: true,
+  },
+
+  {
+    name: 'Labs',
+    selector: 'infrastruct_labs',
+    sortable: true,
+  },
+
+  {
+    name: 'Infrastructure',
+    selector: 'infrastructure_images',
     sortable: true,
   },
   {
     name: 'Action',
     selector: 'action',
-    cell: row => <div><ViewButton name="Create"  /><ViewButton name="Edit" /><ViewButton name="Delete" /></div>
+    cell: row => <div><ViewButton name="View" /><ViewButton name="Edit" /><ViewButton name="Delete" /></div>
   },
 ];
-const SchoolScreen = () => {
+const ProgramIndividual = () => {
 
   const [value, setValue] = useState('')
 
   useEffect(() => {
-    axios.get('http://localhost:8000/api/schools/?format=json')
+    axios.get('http://127.0.0.1:8000/api/indprogram/?format=json')
     .then(function (response) {
       console.log(response);
       setValue(response.data);
@@ -67,7 +98,7 @@ const SchoolScreen = () => {
         <div>
             <SideNav />
             <div className="main">
-            <h2>School</h2>
+            <h2>Program Individual</h2>
             <DataTable
                 title=""
                 columns={columns}
@@ -80,4 +111,4 @@ const SchoolScreen = () => {
     )
 }
 
-export default SchoolScreen
+export default ProgramIndividual

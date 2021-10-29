@@ -72,7 +72,7 @@ const SchoolIndividual = () => {
         <div>
             <SideNav />
             <div className="main">
-            <h2>School</h2>
+            <h2>School Individual</h2>
             <DataTable
                 title=""
                 columns={columns}
